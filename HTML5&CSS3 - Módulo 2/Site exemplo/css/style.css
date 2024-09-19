@@ -1,0 +1,60 @@
+@charset "UTF-8"; /*======== Caso haja problemas com acentuação ======= */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to right, #717FA5, #5783FA);
+}
+
+main {
+    width: min(800px, 100%);
+    margin: auto;
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.551);
+    margin: 10px;
+
+    padding: 20px;
+    
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.345);
+    
+    line-height: 30px;
+    border-radius: 10px;
+
+    font-family: monospace;
+}
+
+h1 {
+    color: #280e85;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+h1::before {
+    content: "|";
+    
+    padding-right: 10px;
+
+    width: 10px;
+    height: 20px;
+    color: rgb(85, 22, 148);
+}
+
+h2 {
+    text-align: center;
+    color: #694994;
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.285);
+    display: inline-block;
+}
+
+p{
+    text-align: justify;
+    font-size: 1.2rem;
+    padding: 10px;
+}

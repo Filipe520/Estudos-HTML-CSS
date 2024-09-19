@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Site</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+</head>
+<body>
+    <!-- Jeito novo de fazer a estrutura do HTML5 -->
+
+    <!-- Grouping Tags -->
+
+    <header>
+        <h1>
+            Meu site
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+            </ul>
+
+            <aside class="pesquisa">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" class="blocotxt" placeholder="Digite algo?">
+            </aside>
+
+            <i class="fa-regular fa-user fa-lg usuario"></i>
+        </nav>
+    </header>
+
+    <main>
+        <section id="assuntos">
+            <article>
+                <h1>Esportes Politica Texnologia</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat qui voluptatem iusto autem fuga. Nihil ducimus ullam inventore perspiciatis assumenda sit numquam laborum ex, nemo quis possimus asperiores ad sed.</p>
+            </article>
+        </section>
+        <section id="noticias">
+            <!-- (article) artigo -->
+            <article>
+                <h2>Notícia sobre o Brasil</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, quas assumenda accusantium repellat ad sed quidem voluptas ullam laudantium! Quisquam consequatur corporis eos veritatis enim, et itaque tenetur soluta aspernatur.</p>
+                <!-- (aside) é um conteúdo relativo ao artigo  -->
+                <aside>
+                    <p>Artigo escrito por Filipe Alves</p>
+                </aside>
+            </article>
+            <article class="iframe">
+                <iframe  src="https://www.youtube.com/embed/JPMm-jyKOaM?si=nfxLBn0ixqEht14e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                <aside><a href="https://www.youtube.com/watch?v=JPMm-jyKOaM" target="_blank" rel="external">Curso em Vídeo</a></aside>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p><a href="#">Desenvolvido pelo DevQuality</a></p>
+    </footer>
+</body>
+</html>

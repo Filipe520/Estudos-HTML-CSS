@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body style="display: flex; align-items: center; justify-content: center;">
+    <main style="width: 1000px;">
+         <h1>Imagem dinâmica</h1>
+         <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+     
+         <picture>
+             <source media="(max-width: 750px)" srcset="image/pequena.png" type="image/png">
+             <source media="(max-width: 1050px)" srcset="image/medio.png" type="image/png">
+             <img src="image/grande.png" alt="imagem flexível">
+         </picture>
+     
+         <h2>Reproduzindo Áudio</h2>
+         <p>Vamos aprender a reproduzir áudio em HTML5.</p>
+         <!-- <audio src="music/03-akon-smack_that_(feat_eminem).mp3" controls autoplay></audio> -->
+         <!-- Formatos de Áudios: MP3 - WAV - OGG-->
+          <audio preload="metadata" controls>
+             <source src="music/03-akon-smack_that_(feat_eminem).mp3" type="audio/mpeg">
+             <source src="music/03-akon-smack_that_(feat_eminem).ogg" type="audio/ogg">
+             <source src="music/03-akon-smack_that_(feat_eminem).wav" type="audio/wav">
+             <p>Infelizmente seu navegador não consegue reproduzir áudio. <a href="music/03-akon-smack_that_(feat_eminem).mp3">Clique aqui para baixar o arquivo MP#</a></p>
+          </audio>
+          <h2>Inserindo vídeos hospedado localmente</h2>
+          <p>Este vídeo está hospedado no meu próprio servidor</p>
+          <video poster="image/banner-limon.avif" controls loop width="100%">
+             <source src="video/Limon-webm-720P.mp4" type="video/mp4">
+             <source src="video/Limon-mp4-720p.mp4" type="video/mp4">
+             <source src="video/limon-mp4-original.mp4" type="video/mp4">
+             <p>Seu navegador não tem compatibilidade com reprodução de vídeos.</p>
+          </video>
+          <h3>Adicionando vídeos do YouTube</h3>
+     
+          <iframe width="100%" height="600px" src="https://www.youtube.com/embed/ijqjqwiNdV4?si=ItUFEuWxYPehzYri" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+     
+          <h3>Adicionando vídeos do Vimeo</h3>
+     
+          <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/278845039?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="REEL"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+     </main>
+</body>
+</html>

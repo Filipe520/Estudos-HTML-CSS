@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: 'ValentineSoul';
+    src: url('../fontes/valentine_soul/ValentineSoul.ttf') format('opentype');
+
+    /*
+        Tipos de format()
+            - Opentype (otf)
+            - TrueType (ttf)
+            - Embedded-opentype
+            - TrueType-aat (Apple Advanced Typography)
+            - svg
+    */
+}
+
+body {
+    /*===== Medidas Absolutas =====*/
+    /*  cm, mm, in, px, pt, pc  */
+    
+    /*===== Medidas Relativas =====*/
+    /*  em, ex, rem, vw, vh, %
+    16px geralmente = 1em
+    */
+    font-size: 100%;
+    
+    
+    font-weight: lighter;
+    /* lighter, normal, bold, bolder*/
+    
+    font-style: italic;
+    background-color: rgb(62, 62, 62);
+}
+
+main {
+    width: min(700px, 100%);
+    margin: auto;
+}
+
+section {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.546);
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 1.8em;
+    text-decoration: underline;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+p {
+    font: normal 100 1.1em "Poppins, sans-serif";
+    /*======= ShortHand em Fontes ========*/
+    /* font-style -> font-weght -> font-size -> font-family*/
+    text-align: justify;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-family: "Kaushan Script", cursive;
+    text-align: left;
+}
+
+h3 {
+    text-align: right;
+    font-family: 'ValentineSoul';
+    word-spacing: 15px;
+    font-size: 3em;
+    font-weight: lighter;
+}

@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    background-image: linear-gradient(to right, #D92B8B, #723BBF, #F25050, #FADD06,#1959DF);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+section {
+    width: min(600px, 100vw);
+    background-color: rgba(255, 255, 255, 0.766);
+    padding: 20px;
+    text-align: justify;
+    border-radius: 10px;
+    margin: 10px;
+
+    color: #000000;
+    line-height: 50px;
+    text-transform: uppercase;
+}
+
+h2 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.251);
+    padding-left:  10px;
+}
