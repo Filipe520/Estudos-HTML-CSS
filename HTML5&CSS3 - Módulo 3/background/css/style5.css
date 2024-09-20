@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section#container {
+    position: relative;
+    height: 100vh;
+    padding: 10px;
+    background: rgb(172, 72, 72) url(../imagens/target001.png) no-repeat;
+    background-size: 100% 100%;
+
+    & article#conteudo {
+        width: 300px;
+        height: 300px;
+
+        background: rgb(251, 255, 0) url(../imagens/target001.png) no-repeat;
+        background-size: 100% 100%;
+        opacity: .7;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+    }
+}
+
