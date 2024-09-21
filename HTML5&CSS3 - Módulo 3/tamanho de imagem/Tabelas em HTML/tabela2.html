@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+            border: 1px solid black;
+        }
+
+        table {
+            width: 500px;
+            border-collapse: collapse;
+            position: relative;
+        }
+
+        thead > tr > th {
+            top: -1px;
+            position: sticky;
+            background-color: rgb(59, 59, 59);
+        }
+
+        td,
+        th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        /* 2n-1 = vai colocar efeito zebrado só nas linhas ímpares */
+        /* odd = vai colocar efeito zebrado só nas linhas ímpares */
+        /* even = vai colocar efeito zebrado nas linhas pares */
+        /* 2n vai colocar efeito zebrado nas linhas pares */
+        tbody > tr:nth-child(2n) {
+            background-color: rgb(32, 197, 142);
+        }
+
+
+        thead {
+            background-color: gray;
+            color: white;
+        }
+
+
+        tfoot  th, tfoot td  {
+            background-color: rgb(44, 44, 44);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Uso de tabela grande</h1>
+    <!-- ANATOMIA PARA TABELAS GRANDES
+     
+            TABLE
+                CAPTION
+                THEAD
+                    TR, TD, TH
+                TBODY
+                    TR, TD, TH
+                TFOOT
+                    TR, TD, TH
+    -->
+
+    <table>
+        <caption>População das Unidades Federativas</caption>
+        <!-- CABEÇA da tabela -->
+        <thead>
+            <tr>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 100px;">População</th>
+            </tr>
+        </thead>
+        <!-- CORPO da tabela -->
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45 919 049</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21 168 791</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">17 264 943</td>
+            </tr>
+            <tr>
+                <td> Bahia</td>
+                <td class="num">14 850 513</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">11 824 665</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11 229 915</td>
+            </tr>
+            <tr>
+                <td>Pernambuco</td>
+                <td class="num">9 539 029</td>
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="num">9 233 656	</td>
+            </tr>
+            <tr>
+                <td>Pará</td>
+                <td class="num">8 664 306</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num">8 058 447	</td>
+            </tr>
+            <tr>
+                <td>Goiás</td>
+                <td class="num">7 350 483</td>
+            </tr>
+            <tr>
+                <td>Maranhão</td>
+                <td class="num">7 010 960</td>
+            </tr>
+            <tr>
+                <td>Amazonas</td>
+                <td class="num">4 281 209</td>
+            </tr>
+            <tr>
+                <td>Paraíba</td>
+                <td class="num">4 145 040</td>
+            </tr>
+            <tr>
+                <td>Espírito Santo</td>
+                <td class="num">4 102 129	</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso</td>
+                <td class="num">3 836 399	</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Norte</td>
+                <td class="num">3 446 071</td>
+            </tr>
+            <tr>
+                <td>Piauí</td>
+                <td class="num">3 375 646	</td>
+            </tr>
+            <tr>
+                <td>Alagoas</td>
+                <td class="num">3 220 104</td>
+            </tr>
+            <tr>
+                <td>Distrito Federal</td>
+                <td class="num">2 982 815	</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso do Sul</td>
+                <td class="num">2 901 895	</td>
+            </tr>
+            <tr>
+                <td>Sergipe</td>
+                <td class="num">2 291 077	</td>
+            </tr>
+            <tr>
+                <td>Rondônia</td>
+                <td class="num">1 746 227</td>
+            </tr>
+            <tr>
+                <td>Tocantins</td>
+                <td class="num">1 577 342</td>
+            </tr>
+            <tr>
+                <td>Acre</td>
+                <td class="num">880 631	</td>
+            </tr>
+            <tr>
+                <td>Amapá</td>
+                <td class="num">802 837</td>
+            </tr>
+            <tr>
+                <td>Roraima</td>
+                <td class="num">716 793	</td>
+            </tr>
+
+        </tbody>
+        <!-- rodapé da tabela -->
+        <tfoot>
+            <tr>
+                <th scope="row">Total de Habitante</th>
+                <td><strong>212 583 720</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo ab nulla expedita temporibus error soluta inventore rem omnis reiciendis, aliquam quis dicta pariatur doloremque perferendis minima facere quo veniam numquam?
+        Odio amet fugit doloribus aut expedita ratione maiores qui dolorum ipsam deleniti ut modi laudantium voluptate nostrum, deserunt, sit tempore earum, esse iure rem eius molestiae molestias? Sint, laboriosam? Laboriosam?
+        Odio, id saepe possimus explicabo est earum sapiente! Accusantium culpa deserunt hic sapiente totam impedit nihil maiores consequatur cupiditate unde corrupti assumenda nobis ea, praesentium dolorem dicta perferendis tenetur illo.
+        Temporibus debitis ducimus culpa placeat voluptatem fugiat exercitationem dicta nemo modi vitae veritatis rem, tempora pariatur et minus, earum ipsa fuga. Praesentium blanditiis, nesciunt consequuntur numquam recusandae culpa facilis aliquam.
+        Rem eaque sit harum, nihil molestiae nisi officiis sunt aperiam explicabo illum! Unde, reiciendis rerum ipsa praesentium explicabo accusamus voluptas iusto ducimus mollitia, incidunt similique aliquam distinctio odit! Placeat, porro!
+        Corrupti accusantium, aspernatur deleniti et illo, reiciendis soluta veritatis numquam eius voluptates fugiat, vero ex delectus quia sunt necessitatibus aliquam dolore omnis? Magni unde atque perspiciatis. Eius, dolorum. Laboriosam, vel.
+        Magni, explicabo ea. Dicta optio voluptatem laboriosam at dolorem ea porro eaque facere quia asperiores autem quasi magni commodi illum assumenda doloribus eveniet ipsa, esse nemo molestiae rerum distinctio? Recusandae!
+        Error obcaecati modi, eius consequatur tempora voluptas. Nam expedita aliquid quam iure totam officia, voluptas nulla repellat harum iste, repellendus veritatis quo beatae tempora eveniet corrupti. Dolore omnis placeat cumque!
+        Obcaecati, labore. Nesciunt repudiandae perspiciatis reprehenderit commodi rerum placeat possimus mollitia nihil dolorum laudantium, enim totam repellat unde ipsa voluptatibus autem neque dolor accusamus distinctio in. Tempora reprehenderit ut repellendus.
+        Sequi totam assumenda est reprehenderit quasi molestias quia perspiciatis quod aliquam aliquid, recusandae, sit, quibusdam laboriosam neque excepturi? Consectetur nisi quo amet saepe qui impedit adipisci ratione officia a odit.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo ab nulla expedita temporibus error soluta inventore rem omnis reiciendis, aliquam quis dicta pariatur doloremque perferendis minima facere quo veniam numquam?
+            Odio amet fugit doloribus aut expedita ratione maiores qui dolorum ipsam deleniti ut modi laudantium voluptate nostrum, deserunt, sit tempore earum, esse iure rem eius molestiae molestias? Sint, laboriosam? Laboriosam?
+            Odio, id saepe possimus explicabo est earum sapiente! Accusantium culpa deserunt hic sapiente totam impedit nihil maiores consequatur cupiditate unde corrupti assumenda nobis ea, praesentium dolorem dicta perferendis tenetur illo.
+            Temporibus debitis ducimus culpa placeat voluptatem fugiat exercitationem dicta nemo modi vitae veritatis rem, tempora pariatur et minus, earum ipsa fuga. Praesentium blanditiis, nesciunt consequuntur numquam recusandae culpa facilis aliquam.
+            Rem eaque sit harum, nihil molestiae nisi officiis sunt aperiam explicabo illum! Unde, reiciendis rerum ipsa praesentium explicabo accusamus voluptas iusto ducimus mollitia, incidunt similique aliquam distinctio odit! Placeat, porro!
+            Corrupti accusantium, aspernatur deleniti et illo, reiciendis soluta veritatis numquam eius voluptates fugiat, vero ex delectus quia sunt necessitatibus aliquam dolore omnis? Magni unde atque perspiciatis. Eius, dolorum. Laboriosam, vel.
+            Magni, explicabo ea. Dicta optio voluptatem laboriosam at dolorem ea porro eaque facere quia asperiores autem quasi magni commodi illum assumenda doloribus eveniet ipsa, esse nemo molestiae rerum distinctio? Recusandae!
+            Error obcaecati modi, eius consequatur tempora voluptas. Nam expedita aliquid quam iure totam officia, voluptas nulla repellat harum iste, repellendus veritatis quo beatae tempora eveniet corrupti. Dolore omnis placeat cumque!
+            Obcaecati, labore. Nesciunt repudiandae perspiciatis reprehenderit commodi rerum placeat possimus mollitia nihil dolorum laudantium, enim totam repellat unde ipsa voluptatibus autem neque dolor accusamus distinctio in. Tempora reprehenderit ut repellendus.
+            Sequi totam assumenda est reprehenderit quasi molestias quia perspiciatis quod aliquam aliquid, recusandae, sit, quibusdam laboriosam neque excepturi? Consectetur nisi quo amet saepe qui impedit adipisci ratione officia a odit.</p>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela 5</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        table {
+            border-collapse: collapse;
+        }
+
+        table tr, th, td {
+            padding: 10px;
+            border: 1px solid black;
+            width: 100px;
+            height: 50px;
+            text-align: center;
+        }
+
+        .colNome {
+            background-color: rgb(177, 177, 177);
+        }
+        .colSexo {
+            background-color: rgb(184, 62, 62);
+        }
+        .colProfisao {
+            background-color: rgb(231, 218, 103);
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício de Tabela</h1>
+
+    <table>
+        <colgroup>
+            <col class="colNome">
+            <col class="colSexo" span="2">
+            <col class="colProfisao">
+        </colgroup>
+        <caption>Cadastro</caption>
+        <tr>
+            <th scope="col"><strong>Nome</strong></th>
+            <th scope="col"><strong>Sexo</strong></th>
+            <th scope="col"><strong>Idade</strong></th>
+            <th scope="col"><strong>Profissão</strong></th>
+        </tr>
+        <tr>
+            <td>Ana Maria</td>
+            <td>F</td>
+            <td>25</td>
+            <td>Jornalista</td>
+        </tr>
+        <tr>
+            <td>Cláudio</td>
+            <td>M</td>
+            <td>28</td>
+            <td>Programador</td>
+        </tr>
+        <tr>
+            <td>Hélio</td>
+            <td>M</td>
+            <td>42</td>
+            <td>Professor</td>
+        </tr>
+        <tr>
+            <td>Maria</td>
+            <td>F</td>
+            <td>39</td>
+            <td>Médica</td>
+        </tr>
+        <tr>
+            <td>Ótavio</td>
+            <td>M</td>
+            <td>22</td>
+            <td>Nutricionista</td>
+        </tr>
+    </table>
+</body>
+</html>
