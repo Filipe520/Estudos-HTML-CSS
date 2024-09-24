@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Home</title>
+    <style>
+        body {
+            background-color: rgb(71, 141, 247);
+        }
+
+        main {
+            background-color: rgb(241, 241, 241);
+            padding: 10px;
+            text-align: center;
+            border: 1px solid black;
+            border-radius: 0 40px 0 40px ;
+
+            & img {
+                width: 200px;
+            }
+
+            & mark{
+                font-size: 2em;
+                background-color: rgba(255, 0, 0, 0);
+                color: red;
+                border-top: 1px solid black;
+                border-bottom: 1px solid black;
+                border-radius: 10px;
+                padding: 0 10px 0 10px;
+                transition: .5s all ease;
+                cursor: pointer;
+            }
+
+            & mark:hover {
+                background-color: rgb(66, 66, 66);
+                color: white;
+            }
+
+            & a {
+                text-decoration: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <h1>Bem-Vindo(a) ao meu site</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quae eos minus modi facere deserunt, totam atque nulla illum voluptatibus maiores eligendi voluptatum, ducimus reiciendis maxime magni nesciunt, blanditiis cumque?</p>
+        <img src="../../image/mascote.png" alt="">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem consectetur non eos architecto vel voluptatum voluptates, unde doloremque nemo atque rem consequatur reiciendis natus doloribus ea? Quaerat aliquam at quis.</p>
+
+        <p class="button">Clique aqui <mark>&leftarrow;</mark>
+        </p>
+
+        <article class="saida">
+
+        </article>
+    </main>
+    <script>
+        let botao = document.querySelector("p.button")
+
+        botao.addEventListener("click", clicouNoBotao) 
+
+        function clicouNoBotao() {
+            let body = document.querySelector("article.saida");
+            body.innerHTML += "<p>Clicou no botão</p>"
+        }
+    </script>
+</body>
+</html>

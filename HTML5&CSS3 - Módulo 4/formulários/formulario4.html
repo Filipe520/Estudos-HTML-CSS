@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário 4</title>
+</head>
+<body>
+    <h1>Meu Quarto Formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Esportes favoritos</legend>
+            <label for="iesfut">Futebol</label>
+            <input type="checkbox" name="esfut" id="iesfut" value="futebool"><br>
+            <label for="iesbas">Basquete: </label>
+            <input type="checkbox" name="esbas" id="iesbas" value="basquete" checked><br>
+            <label for="iesnat">Natação: </label>
+            <input type="checkbox" name="esnat" id="iesnat" value="natação"><br>
+            <label for="iesten">Tênis: </label>
+            <input type="checkbox" name="esten" id="iesten" value="tênis"><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>SEXO</legend>
+            <input type="radio" name="sexo" id="isxfem" value="f">
+            <label for="isxfem">Feminino</label>
+            <input type="radio" name="sexo" id="isxmas" checked value="m">
+            <label for="isxfem">Masculino</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>color, range, file</legend>
+
+            <label for="icor">Cor: </label>
+            <input type="color" name="color" id="icolor">
+
+            <label for="inivel">Nível de Satisfação:  </label>
+            <input type="range" name="nivel" id="inivel" min="1" max="5" value="1">
+
+            <!-- Quando for usar o input:file não pode usar o métado get é sim o métado post -->
+            <p>
+                <label for="ifoto">Foto do perfil: </label>
+                <input type="file" name="foto" id="ifoto">
+            </p>
+        </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+
+    </form>
+</body>
+</html>

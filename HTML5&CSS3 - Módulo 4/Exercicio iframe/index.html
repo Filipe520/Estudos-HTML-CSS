@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de iframe</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(32, 32, 32);
+            height: 100dvh;
+
+        }
+        main {
+            width: min(1000px, 100%);
+            background-color: rgb(255, 255, 255);
+            padding: 10px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 1.2em;
+        }
+
+        main h1 {
+            font-variant-caps: small-caps;
+        }
+        
+        main > section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        section ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        section li a {
+            color: rgb(134, 51, 151);
+            text-decoration: none;
+
+            font-family: monospace;
+            font-size: 1.2em;
+            border: 1px solid black;
+            padding: 5px;
+            border-radius: 5px;
+            outline: 1px solid rgb(1, 133, 170);
+        }
+
+        section li a:hover {
+            text-decoration: underline;
+            color: rgb(128, 94, 94);
+
+        }
+
+        iframe {
+            border-radius: 0 40px 0 40px;
+            width: min(700px, 100%);
+            height: 500px;
+            border: 1px solid black;
+
+            display: block;
+        }
+
+        @media (max-width: 650px) {
+            ul {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Faça uma escolha</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quasi, at tempore rem officia sunt, quaerat eius corporis est exercitationem voluptatum ab, corrupti reiciendis eos a aspernatur facilis ipsam. Nemo.</p>
+            <aside>
+                <ul>
+                    <li><a href="Pagina Extras/pagina01.html" target="iframe">Primeira Página</a></li>
+                    <li><a href="Pagina Extras/pagina02.html" target="iframe">Segunda Página</a></li>
+                    <li><a href="Pagina Extras/pagina03.html" target="iframe">Terceira Página</a></li>
+                    <li><a href="Pagina Extras/login.html" target="iframe">Acesse seu Login</a></li>
+                </ul>
+            </aside>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe ipsa fuga quo quas repellat provident reiciendis, illum neque quis, perferendis libero sunt qui, error autem omnis sit distinctio tempora non!</p>
+        </section>
+        <section>
+            <!-- As própriedades sandbox e referrerpolicy vai deixar o iframe mais seguro  -->
+            <iframe srcdoc="
+            <h1>Escolha uma das opções acima</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates aliquam, itaque voluptatem doloribus sequi dolor est aut veniam, voluptas laudantium corrupti esse illum nulla fugiat nobis. Facere adipisci voluptatibus ea?</p>
+
+            <img style='width: 300px' src='image/mascote.png'></img>
+            " name="iframe" frameborder="0" sandbox="allow-scripts allow-forms" referrerpolicy="no-referrer"></iframe>
+        </section>
+    </main>
+</body>
+</html>

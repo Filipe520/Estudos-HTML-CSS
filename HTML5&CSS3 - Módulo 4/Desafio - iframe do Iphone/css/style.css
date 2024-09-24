@@ -1,0 +1,135 @@
+/* Fontes do Google Fonts */
+
+
+
+/* Resetando o body */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+main {
+    width: min(3000px, 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    position: relative;
+
+    & img {
+        width: 120%;
+        object-fit: cover;
+    }
+
+    
+    & section.menuNavegacao {
+        width: min(400px, 100%);
+        height: 100vh;
+        /* background-color: rgba(96, 238, 151, 0.5); */
+        
+        padding: 20px;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: clamp(16px, 50%, 40px);
+        
+        position: relative;
+        
+        & ul {
+            width: 100%;
+            height: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            list-style: none;
+        }
+        
+        & .item {
+            width: 70px;
+            height: 40px;
+            outline: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgb(3, 115, 180);
+            background-color: rgba(63, 63, 63, 0.747);
+            border-bottom: 2px solid rgb(255, 255, 255);
+            border-radius: 10%;
+            & a {
+                color: white;
+            }
+            
+        }
+        & .item:hover {
+            border: 1px solid rgb(3, 115, 180);
+            background-color: rgba(66, 66, 66, 0.747);
+            border-bottom: 2px solid rgb(0, 162, 255);
+        }
+    }
+    & .iframe {
+        /* background-color: rgba(238, 255, 0, 0.171); */
+        width: 100%;
+        height: 100%;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-image: url(../image/frame-iphone.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: min(700px ,40%);
+    
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+@media (min-width: 700px) {
+    main {
+    background-image: url(../image/img-editada/wallpaper-05.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    }
+}
+
+@media (max-width: 700px) {
+    body {
+        overflow: hidden;
+        background-image: url(../image/img-editada/wallpaper-06.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    main {
+        flex-direction: column;
+        
+        & section.menuNavegacao ul{
+            display: flex;
+            flex-direction: inherit;
+        }
+
+        & .iframe {
+            width: 320px;
+            height: 600px;
+
+            align-items: baseline;
+        }
+
+        & section.menuNavegacao {
+            height: 10vh;
+        }
+    }
+}

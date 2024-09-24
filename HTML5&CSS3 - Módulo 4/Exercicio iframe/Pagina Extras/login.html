@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            background-color: rgb(58, 58, 58);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            height: 100vh;
+        }
+
+        main {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+
+            width: min(800px, 100%);
+
+            border: 1px solid rgb(47, 235, 0);
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            border-radius: 10px;
+            
+            & .col1 {
+                text-align: center;
+                font-family: monospace;
+            }
+
+            & .col2{
+                padding: 10px;
+                width: 300px;
+                border-left: 1px solid rgba(0, 0, 0, 0.212);
+                border-right: 1px solid rgba(0, 0, 0, 0.212);
+            }
+            
+            & h1, p {
+                text-align: center;
+
+            }
+
+            & form{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                & aside {
+                    padding: 10px;
+
+                    font-size: 1.2em;
+                }
+            }
+        }
+
+        @media (max-width: 650px) {
+            main {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="col1">
+            <h2>Minha tela de login</h2>
+            <img src="../image/mascote.png" alt="">
+        </section>
+        <section class="col2">
+            <h1>Tela Login</h1>
+            <p>Acesse seu Perfil</p>
+
+            <form action="login/home.html" method="get">
+                <aside>
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email" placeholder="Digite seu E-mail...">
+                </aside>
+                <aside>
+                    <label for="senha">Senha:</label>
+                    <input type="password" name="senha" id="senha" placeholder="Digite sua senha....">
+                </aside>
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+    </main>
+</body>
+</html>
